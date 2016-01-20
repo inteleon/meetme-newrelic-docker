@@ -10,7 +10,7 @@ RUN mkdir -p /etc/newrelic/
 
 COPY newrelic-plugin-agent.tmpl /etc/newrelic/
 
-COPY init.sh /usr/bin
+COPY init.sh /usr/bin/
 RUN chmod +x /usr/bin/init.sh
 
 ENTRYPOINT ["/usr/bin/init.sh"]
