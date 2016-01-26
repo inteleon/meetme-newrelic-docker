@@ -22,11 +22,11 @@ Application:
   #  username: foo
   #  password: bar
 
-  #elasticsearch:
-  #  name: Clustername
-  #  host: localhost
-  #  port: 9200
-  #  scheme: http
+  elasticsearch:
+    name: ${RAILS_ENV}_es
+    host: elasticsearch 
+    port: 9200
+    scheme: http
 
   #haproxy:
   #  name: hostname
