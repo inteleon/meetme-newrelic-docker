@@ -23,7 +23,7 @@ Application:
   #  password: bar
 
   elasticsearch:
-    name: ${RAILS_ENV}_es
+    name: ${TUTUM_STACK_NAME}_es
     host: elasticsearch 
     port: 9200
     scheme: http
@@ -37,7 +37,7 @@ Application:
   #  path: /haproxy?stats;csv
 
   memcached:
-    name: ${RAILS_ENV}_memcached
+    name: ${TUTUM_STACK_NAME}_memcached
     host: memcached
   #  port: 11211
   #  path: /path/to/unix/socket
@@ -77,7 +77,7 @@ Application:
   #      password: pass
 
   nginx:
-    name: ${RAILS_ENV}_nginx
+    name: ${TUTUM_STACK_NAME}_nginx
     scheme: http
     host: nginx
     port: 80
@@ -106,7 +106,7 @@ Application:
   #    query: json
 
   postgresql:
-    name: ${RAILS_ENV}_postgres
+    name: ${TUTUM_STACK_NAME}_postgres
     host: postgres
     port: 5432
     user: postgres
@@ -128,11 +128,11 @@ Application:
   #
 
   redis:
-    - name: ${RAILS_ENV}_redis-primary
+    - name: ${TUTUM_STACK_NAME}_redis-primary
       host: redis-primary
-    - name: ${RAILS_ENV}_redis-secondary
+    - name: ${TUTUM_STACK_NAME}_redis-secondary
       host: redis-secondary
-    - name: ${RAILS_ENV}_redis-queue
+    - name: ${TUTUM_STACK_NAME}_redis-queue
       host: redis-queue
   #    host: localhost
   #    port: 6380
