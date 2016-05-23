@@ -23,10 +23,14 @@ Application:
   #  password: bar
 
   elasticsearch:
-    name: ${TUTUM_STACK_NAME}_es
-    host: elasticsearch 
-    port: 9200
-    scheme: http
+    - name: ${TUTUM_STACK_NAME}_es
+      host: elasticsearch 
+      port: 9200
+      scheme: http
+    - name: ${TUTUM_STACK_NAME}_es2
+      host: elasticsearch2
+      port: 9200
+      scheme: http
 
   #haproxy:
   #  name: hostname
@@ -37,8 +41,8 @@ Application:
   #  path: /haproxy?stats;csv
 
   memcached:
-    name: ${TUTUM_STACK_NAME}_memcached
-    host: memcached
+    - name: ${TUTUM_STACK_NAME}_memcached
+      host: memcached
   #  port: 11211
   #  path: /path/to/unix/socket
 
