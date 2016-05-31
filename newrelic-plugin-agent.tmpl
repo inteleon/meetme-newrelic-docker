@@ -23,11 +23,11 @@ Application:
   #  password: bar
 
   elasticsearch:
-    - name: ${TUTUM_STACK_NAME}_es
+    - name: ${DOCKERCLOUD_STACK_NAME}_es
       host: elasticsearch 
       port: 9200
       scheme: http
-    - name: ${TUTUM_STACK_NAME}_es2
+    - name: ${DOCKERCLOUD_STACK_NAME}_es2
       host: elasticsearch2
       port: 9200
       scheme: http
@@ -41,7 +41,7 @@ Application:
   #  path: /haproxy?stats;csv
 
   memcached:
-    - name: ${TUTUM_STACK_NAME}_memcached
+    - name: ${DOCKERCLOUD_STACK_NAME}_memcached
       host: memcached
   #  port: 11211
   #  path: /path/to/unix/socket
@@ -81,7 +81,7 @@ Application:
   #      password: pass
 
   nginx:
-    name: ${TUTUM_STACK_NAME}_nginx
+    name: ${DOCKERCLOUD_STACK_NAME}_nginx
     scheme: http
     host: nginx
     port: 80
@@ -110,7 +110,7 @@ Application:
   #    query: json
 
   postgresql:
-    name: ${TUTUM_STACK_NAME}_postgres
+    name: ${DOCKERCLOUD_STACK_NAME}_postgres
     host: postgres
     port: 5432
     user: postgres
@@ -132,11 +132,11 @@ Application:
   #
 
   redis:
-    - name: ${TUTUM_STACK_NAME}_redis-primary
+    - name: ${DOCKERCLOUD_STACK_NAME}_redis-primary
       host: redis-primary
-    - name: ${TUTUM_STACK_NAME}_redis-secondary
+    - name: ${DOCKERCLOUD_STACK_NAME}_redis-secondary
       host: redis-secondary
-    - name: ${TUTUM_STACK_NAME}_redis-queue
+    - name: ${DOCKERCLOUD_STACK_NAME}_redis-queue
       host: redis-queue
   #    host: localhost
   #    port: 6380
